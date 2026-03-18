@@ -1,62 +1,62 @@
-# Angular Todo App – Setup-Anleitung
+# Angular Todo App – Setup Guide
 
-Diese App ist eine Todo-Liste, die im Browser läuft. Du kannst Aufgaben hinzufügen, bearbeiten und löschen. Die Daten werden in Firebase gespeichert.
+This app is a todo list that runs in the browser. You can add, edit, and delete tasks. The data is stored in Firebase.
 
-## 1) Was du brauchst
+## 1) What you need
 
-Folgende Programme müssen auf deinem Computer installiert sein:
+The following programs must be installed on your computer:
 
-- **Node.js** (LTS-Version) – Download: https://nodejs.org
-- **npm** – Wird automatisch mit Node.js installiert
+- **Node.js** (LTS version) – Download: https://nodejs.org
+- **npm** – Is installed automatically with Node.js
 - **Git** – Download: https://git-scm.com
 - **Visual Studio Code** – Download: https://code.visualstudio.com
 
-## 2) Projekt herunterladen und einrichten
+## 2) Download and set up the project
 
-### 2.1 Terminal öffnen
+### 2.1 Open the terminal
 
-- Öffne **Visual Studio Code**
-- Öffne das Terminal: Menü → Terminal → Neues Terminal (oder `Strg + Ö`)
+- Open **Visual Studio Code**
+- Open the terminal: Menu → Terminal → New Terminal (or `Ctrl + Ö`)
 
-### 2.2 Projekt von GitHub klonen
+### 2.2 Clone the project from GitHub
 
-Gib folgende Befehle nacheinander ins Terminal ein:
+Enter the following commands one after another in the terminal:
 
 ```bash
 git clone https://github.com/rhyno-solutions-ag/angular-todo-list.git
 cd angular-todo-list
 ```
 
-Das lädt das Projekt herunter und wechselt in den Projektordner.
+This downloads the project and switches to the project folder.
 
-### 2.3 Abhängigkeiten installieren
+### 2.3 Install dependencies
 
-Im Terminal eingeben:
+Enter in the terminal:
 
 ```bash
 npm install
 ```
 
-Dieser Befehl installiert alle benötigten Bibliotheken. Das kann 1-2 Minuten dauern.
+This command installs all required libraries. This can take 1-2 minutes.
 
-## 3) Firebase einrichten
+## 3) Set up Firebase
 
-Firebase speichert die Todo-Daten in der Cloud. Du erhältst die Zugangsdaten von deinem Betreuer.
+Firebase stores the todo data in the cloud. You will receive the access data from your supervisor.
 
-### 3.1 Environment-Dateien erstellen
+### 3.1 Create environment files
 
-Die Firebase-Konfigurationsdateien müssen zuerst erstellt werden (sie sind aus Sicherheitsgründen nicht im Repository).
+The Firebase configuration files must be created first (they are not in the repository for security reasons).
 
-**Im Explorer (linke Seite von VS Code):**
+**In the Explorer (left side of VS Code):**
 
-1. Öffne den Ordner `src/environments`
-2. Erstelle zwei neue Dateien:
-   - Rechtsklick auf `environments` → Neue Datei → `environment.ts`
-   - Rechtsklick auf `environments` → Neue Datei → `environment.development.ts`
+1. Open the folder `src/environments`
+2. Create two new files:
+   - Right-click `environments` → New File → `environment.ts`
+   - Right-click `environments` → New File → `environment.development.ts`
 
-### 3.2 Firebase-Daten eintragen
+### 3.2 Enter Firebase data
 
-**In die Datei `environment.ts`** folgenden Code einfügen:
+**Insert the following code into the file `environment.ts`:**
 
 ```typescript
 export const environment = {
@@ -72,7 +72,7 @@ export const environment = {
 };
 ```
 
-**In die Datei `environment.development.ts`** folgenden Code einfügen:
+**Insert the following code into the file `environment.development.ts`:**
 
 ```typescript
 export const environment = {
@@ -88,45 +88,45 @@ export const environment = {
 };
 ```
 
-Ersetze die Platzhalter (`HIER_DEIN_...`) mit den Daten, die du von deinem Betreuer erhalten hast.
+Replace the placeholders (`HIER_DEIN_...`) with the data you received from your supervisor.
 
-**Wichtig:** Trage die Daten in **beide** Dateien ein!
+**Important:** Enter the data in **both** files!
 
-## 4) App starten
+## 4) Start the app
 
-### 4.1 Development-Server starten
+### 4.1 Start the development server
 
-Im Terminal eingeben:
+Enter in the terminal:
 
 ```bash
 npm start
 ```
 
-Der Server startet jetzt. Das kann beim ersten Mal etwas länger dauern.
+The server will start now. This may take a bit longer the first time.
 
-### 4.2 App im Browser öffnen
+### 4.2 Open the app in the browser
 
-Wenn im Terminal `Compiled successfully` steht, öffne deinen Browser und gehe zu:
+When `Compiled successfully` appears in the terminal, open your browser and go to:
 
 ```
 http://localhost:4200
 ```
 
-Du solltest jetzt die Todo-App sehen! 🎉
+You should now see the todo app! 🎉
 
-### 4.3 Änderungen sehen
+### 4.3 See changes
 
-Wenn du am Code etwas änderst und speicherst, lädt die App im Browser automatisch neu.
+If you change something in the code and save, the app in the browser reloads automatically.
 
-## 5) Weitere Befehle
+## 5) Additional commands
 
 ```bash
-# App im Browser öffnen (Development-Server)
+# Open app in browser (development server)
 npm start
 
-# App für Produktion bauen
+# Build app for production
 npm run build
 
-# Tests ausführen
+# Run tests
 npm test
 ```
